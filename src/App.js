@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import './App.css';
-// let movielist1=[]
+
 
 function App() {
   
@@ -13,7 +13,44 @@ function App() {
   const [summary,setsummary] = useState("");
   const [imdb,setimdb] = useState("");
 
-  const [movielist ,setmovielist]=useState([])
+  const [movielist ,setmovielist]=useState([ {
+      name: "O kadhal Kanmani",
+      poster:
+        "https://www.filmibeat.com/ph-big/2015/02/ok-kanmani-first-look_142424557800.jpg",
+      summary:
+        "It is love at first sight for a young couple repelled by concept of marriage, but their view shifts when they meet their older-couple neightbors",
+      year: "2015",
+      genre:["Romance", "tamil"],
+      imdb: "7.4",
+
+    },
+    {
+      name:"Soorarai Pottru ",
+      poster:"https://moviegalleri.net/wp-content/gallery/soorarai-pottru-movie-stills-hd/suriya-soorarai-pottru-movie-stills-hd-3ca12e5.jpg",
+      summary:"Nedumaaran Rajangam 'Maara' sets out to make the common man fly and in the process takes on the world's most capital intensive industry and several enemies who stand in his way.",
+      year:"2020",
+      genre:["Drama", "tamil"],
+      imdb:"9.1",
+  
+    },
+    {
+      name:"Doctor ",
+      poster:"https://moviegalleri.net/wp-content/uploads/2020/02/Sivakarthikeyan-Doctor-Movie-First-Look-Poster-HD.jpg",
+      summary:"When his fiancee's niece is kidnapped, a stoic army doctor and his motley team launch a rescue operation in which they need both wit and their wits.r",
+      year:"2021",
+      genre:["Drama/Action", "tamil"],
+      imdb:"7.7",
+  
+    },
+    {
+      name:"Kuruthi",
+      poster:"https://m.media-amazon.com/images/M/MV5BNDlmZmM5N2MtNGUyMC00YmU2LWFmYzMtYWVlZDlhMmEwMmU3XkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_.jpg",
+      summary:"Conflicts started to happen in Moosa Khader's home after the entry of a police officer and a murder convict.",
+      year:"2021",
+      genre:["survival-thriller", "malayalam"],
+      imdb:"7.7",
+    },
+  ])
 
   const [show,setshow] = useState(false);
   const formstyle = {display:show?"block":"none"}
@@ -54,7 +91,7 @@ function App() {
       <div>
         <button className='btn btn-primary' onClick={()=>
         { 
-          // movielist1 =  [...movielist,{name:name,poster:poster,year:year,genre:genre,summary:summary,imdb:imdb}];
+          
           setmovielist([...movielist,{name:name,poster:poster,year:year,genre:genre,summary:summary,imdb:imdb}])}
   
         }
@@ -77,6 +114,8 @@ function App() {
       year={year}
       genre={genre}
       imdb={imdb}
+      movielist = {movielist}
+      setmovie={setmovielist}
     />
      ))
 
@@ -96,16 +135,14 @@ function App() {
 export default App;
 
 
-function Movie({ name, poster, summary, year, genre, imdb }) {
-  console.log({name},{poster},{summary},{year},{genre},{imdb})
+function Movie({ name, poster, summary, year, genre, imdb ,movielist,setmovie}) {
+  console.log("movielist",movielist)
   const style = (imdb>8)?{color:"rgb(116, 9, 9)"}:{color:"white"};
   return (
     <div className="card" id={name}>
       <button className='remove-btn' id={name}  onClick={(e)=>{
         console.log(e.target.id);
-        // movielist1= movielist1.filter((movie)=>e.target.id!=movie.name)
-        // console.log(movielist1)
-        
+        setmovie(movielist.filter(({name})=>e.target.id!=name))
       }}>X</button>
      <h2> {name}</h2>
      
