@@ -5,11 +5,25 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* text-align: center; */
 }
+body{
+  /* background-image: linear-gradient(to top,#1B3D81 ,#8fa8e2); */
+  background-color: #8fa8e2;
+}
+.bar{
+  /* background-color: black; */
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
 .content {
   margin: 10px;
   display: flex;
   flex-wrap: wrap;
+<<<<<<< HEAD
   gap: 30px;
+=======
+  gap: 20px;
+>>>>>>> f67d52d11739c5283c4585e075d0531018356074
 
   justify-content:space-evenly;
 }
@@ -57,3 +71,62 @@ body{
 }
 
 
+
+/*****/
+.form{
+  margin: 0% 10%;
+ text-align: center;
+ width: 80%;
+ padding: 20px;
+ border-radius: 10px;
+ background-color: rgb(229, 233, 243);
+ box-shadow: 1px 2px gray;
+}
+.formhead{
+  font-weight: bolder;
+  font-size: x-large;
+  /* color: rgb(36, 86, 194); */
+}
+
+.form label{
+  margin: 5px;
+}
+button{
+  margin: 20px;
+  height: 40px;
+  width: 80%;
+  text-align: center;
+}
+.showformbtn{
+  margin: 20px;
+  height: 40px;
+  width: 60%;
+}
+.textbox{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 5px;
+  box-sizing: border-box;
+}
+.remove-btn{
+  height: 40px;
+  width: 40px;
+  border-radius: 100px;
+  color: white;
+  background-color:rgb(116, 9, 9);
+  border:none;
+  outline: none;
+  position: relative;
+  margin: 3px;
+  font-weight: bolder;
+  font-size: medium;
+}
+.remove-btn:hover,.remove-btn:focus{
+  border:2px solid red;
+}
+.material-head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap:100px;
+}
