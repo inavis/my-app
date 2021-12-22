@@ -2,132 +2,46 @@
 import './App.css';
 
 function App() {
-  const movies = [
+  const plans = [
     {
-      name: "Toy Story 3",
-      poster:
-        "https://m.media-amazon.com/images/M/MV5BNWM2YTFkODItNTAyZC00ZGYwLTkwYmMtMDZlODc2MTViYjI4XkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_.jpg",
-      summary:
-        "The toys are mistakenly delivered to a day-care center instead of the attic right before Andy leaves for college, and it's up to Woody to convince the other toys that they weren't abandoned and to return home.",
-      year: "2021",
-      genre: ["Animation,Comedy", "English"],
-      imdb: "8.2",
-      
+      name:"FREE",
+      rate:0,
+    features:[{ft:"Single User",avail:true,bold:false},
+              {ft:"5GB Storage",avail:true,bold:false},
+              {ft:"Unlimited Public Projects",avail:true,bold:false},
+              {ft:"Community Access",avail:true,bold:false},
+              {ft:"Unlimited Private Projects",avail:false,bold:false},
+              {ft:"Dedicated Phone Support",avail:false,bold:false},
+              {ft:"Free Subdomain",avail:false,bold:false},
+              {ft:"Monthly Status Reports",avail:false,bold:false},
+            ]
     },
     {
-      name: "Venom",
-      poster:
-        "https://c4.wallpaperflare.com/wallpaper/266/85/309/venom-wallpaper-preview.jpg",
-      summary:
-        "A reporter battles a mad scientist in a fight for his life merging with a snarking alien symbiote that gives him remarkable superpowers",
-      year: "2018",
-      genre:["Superhero", "English"],
-      imdb: "6.7",
-    },
-    {
-      name: "Rush Hour",
-      poster:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlfXcK4lObyCKv3R9KNXeYYE_ejHYuzFnP-A&usqp=CAU",
-      summary:
-        "A Hong KOng supercop and an LAPD hothead find a common interest while a kidnapping case:kicking bad-guy.",
-      year: "1998",
-      genre: ["Action/Comedy", "English"],
-      imdb: "7",
-    },
-  
-    {
-      name: "O kadhal Kanmani",
-      poster:
-        "https://www.filmibeat.com/ph-big/2015/02/ok-kanmani-first-look_142424557800.jpg",
-      summary:
-        "It is love at first sight for a young couple repelled by concept of marriage, but their view shifts when they meet their older-couple neightbors",
-      year: "2015",
-      genre:["Romance", "tamil"],
-      imdb: "7.4",
-
-    },
-    {
-      name:"Soorarai Pottru ",
-      poster:"https://moviegalleri.net/wp-content/gallery/soorarai-pottru-movie-stills-hd/suriya-soorarai-pottru-movie-stills-hd-3ca12e5.jpg",
-      summary:"Nedumaaran Rajangam 'Maara' sets out to make the common man fly and in the process takes on the world's most capital intensive industry and several enemies who stand in his way.",
-      year:"2020",
-      genre:["Drama", "tamil"],
-      imdb:"9.1",
-  
-    },
-    {
-      name:"Doctor ",
-      poster:"https://moviegalleri.net/wp-content/uploads/2020/02/Sivakarthikeyan-Doctor-Movie-First-Look-Poster-HD.jpg",
-      summary:"When his fiancee's niece is kidnapped, a stoic army doctor and his motley team launch a rescue operation in which they need both wit and their wits.r",
-      year:"2021",
-      genre:["Drama/Action", "tamil"],
-      imdb:"7.7",
-  
-    },
-    {
-      name:"Kuruthi",
-      poster:"https://m.media-amazon.com/images/M/MV5BNDlmZmM5N2MtNGUyMC00YmU2LWFmYzMtYWVlZDlhMmEwMmU3XkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_.jpg",
-      summary:"Conflicts started to happen in Moosa Khader's home after the entry of a police officer and a murder convict.",
-      year:"2021",
-      genre:["survival-thriller", "malayalam"],
-      imdb:"7.7",
-    },
-    {
-      name:"Pulp Fiction",
-      poster:"https://upload.wikimedia.org/wikipedia/en/0/06/Pulp_Fiction_%28Soundtrack%29.png",
-      summary:"The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-      year:"1994",
-      genre:["Comedy-crime", "english"],
-      imdb:8.9,
-    },
-    {
-      name:"Inception",
-      poster:"https://m.media-amazon.com/images/I/611ixoDpRLL._AC_.jpg",
-      summary:"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
-      year:"2010",
-      genre:["Science Fiction", "english"],
-      imdb:8.8,
-    },
-    {
-      name:"Iron Man",
-      poster:"https://w0.peakpx.com/wallpaper/905/408/HD-wallpaper-i-am-iron-man-armor-marvel-red-shield-stark-super-yellow.jpg",
-      summary:"After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      year:"2008",
-      genre:["Superhero", "english"],
-      imdb:7.9,
-    },
-    {
-      name:"Wonder Woman",
-      poster:"https://wallpapercave.com/wp/wp5680994.jpg",
-      summary:"When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny.",
-      year:"2017",
-      genre:["Superhero", "english"],
-      imdb:7.4,
-    },
-    {
-      name:"Shang-Chi and the Legend of the Ten Rings",
-      poster:"https://i.pinimg.com/736x/0c/74/1d/0c741d63608bcbaf753c956a7c996cab.jpg",
-      summary:"Shang-Chi, the master of weaponry-based Kung Fu, is forced to confront his past after being drawn into the Ten Rings organization.",
-      year:"2021",
-      genre:["Superhero", "english"],
-      imdb:7.5,
-    },
-    {
-      name:"Extraction ",
-      poster:"https://w0.peakpx.com/wallpaper/217/673/HD-wallpaper-movie-extraction-2020-chris-hemsworth-extraction-movie-thumbnail.jpg",
-      summary:"Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord..",
-      year:"2020",
-      genre:["Action", "english"],
-      imdb:6.7,
-    },
-    {
-      name:"Shershaah",
-      poster:"https://m.media-amazon.com/images/M/MV5BMjk1NzcwMDUtNDU4ZC00MzlhLTkzZjAtM2MxMTRjZGE0ODdhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
-      summary:"The story of PVC awardee Indian soldier Capt. Vikram Batra, who shot to fame and became a household name during the Kargil War in 1999.",
-      year:"2021",
-      genre:["Action/Biography", "hindi"],
-      imdb:8.7,
-    }
+      name:"PLUS",
+      rate:9,
+      features:[{ft:"5 Users",avail:true,bold:true},
+                {ft:"50GB Storage",avail:true,bold:false},
+                {ft:"Unlimited Public Projects",avail:true,bold:false},
+                {ft:"Community Access",avail:true,bold:false},
+                {ft:"Unlimited Private Projects",avail:true,bold:false},
+                {ft:"Dedicated Phone Support",avail:true,bold:false},
+                {ft:"Free Subdomain",avail:true,bold:false},
+                {ft:"Monthly Status Reports",avail:false,bold:false},
+              ]
+      },
+      {
+        name:"PRO",
+        rate:49,
+        features:[{ft:"Unlimited Users",avail:true,bold:true},
+                  {ft:"150GB Storage",avail:true,bold:false},
+                  {ft:"Unlimited Public Projects",avail:true,bold:false},
+                  {ft:"Community Access",avail:true,bold:false},
+                  {ft:"Unlimited Private Projects",avail:true,bold:false},
+                  {ft:"Dedicated Phone Support",avail:true,bold:false},
+                  {ft:"Unlimited Free Subdomains",avail:true,bold:false},
+                  {ft:"Monthly Status Reports",avail:true,bold:false},
+                ]
+        },
   ];
 
   return (
@@ -135,73 +49,20 @@ function App() {
     <div ></div>
 
       <div>
-          <h2 className="title">South Indian Movies</h2>
           <div className="content">
-          {movies.filter((ele)=>ele.genre[1]=="tamil" || ele.genre[1]=="malayalam" || ele.genre[1]=="telugu").map(({ name, poster, summary, year, genre, imdb }) => (
-              <Movie
-                name={name}
-                poster={poster}
-                summary={summary}
-                year={year}
-                genre={genre}
-                imdb={imdb}
-            
-              />
-            ))}
-          </div>
-      </div>
-      <br></br>
-      <div >
-          <h2 className="title">SuperHero movies</h2>
-          <div className="content">
-          {movies.filter((ele)=>ele.genre[0]=="Superhero").map(({ name, poster, summary, year, genre, imdb }) => (
-              <Movie
-                name={name}
-                poster={poster}
-                summary={summary}
-                year={year}
-                genre={genre}
-                imdb={imdb}
-            
-              />
-            ))}
-          </div>
-      </div>
-      <br></br>
-      <div >
-          <h2 className="title">Action movies</h2>
-          <div className="content">
-          {movies.filter((ele)=>ele.genre[0].includes("Action")).map(({ name, poster, summary, year, genre, imdb }) => (
-              <Movie
-                name={name}
-                poster={poster}
-                summary={summary}
-                year={year}
-                genre={genre}
-                imdb={imdb}
-            
-              />
-            ))}
-          </div>
-      </div>
-            <br></br>
-      <div>
-          <h2 className="title">Movies with higher imdb ratings</h2>
-          <div className="content">
-          {movies.filter((ele)=>ele.imdb>8.2).map(({ name, poster, summary, year, genre, imdb }) => (
-              <Movie
-                name={name}
-                poster={poster}
-                summary={summary}
-                year={year}
-                genre={genre}
-                imdb={imdb}
-            
-              />
-            ))}
-          </div>
-      </div>
+          {
+         plans.map(({name,rate,features})=>(
+           <Plans name={name} rate={rate} features={features}/>
+         ))
+       }
 
+           
+          </div>
+      </div>
+      <br></br>
+      
+     
+      
 
     </div>
   );
@@ -209,24 +70,46 @@ function App() {
 
 export default App;
 
-function Movie({ name, poster, summary, year, genre, imdb }) {
-  const style = (imdb>8)?{color:"rgb(116, 9, 9)"}:{color:"white"};
+function Plans({name,rate,features }) {
+
   return (
     <div className="card">
-     <h2> {name}</h2>
-
-      <img src={poster} className="avatar" alt={name} />
-
+     <div className="title">
+        <div className="planname">{name}</div>
+        <br></br>
+        <div className="planrate"><span className="rate">${rate}</span><span className="month">/month</span></div>
+     </div>
+     <hr></hr>
+    <div className="features">
       
-      <div className="details">
-        <div className="detail">{year}</div>
-        <div className="detail">{genre[0]}</div>
-        <div className="detail" style={style}>⭐{imdb}</div>
-      </div>
-
-      <p className="summary">{summary}</p>
-
+      {
+        features.filter(({ft,avail}) =>(
+          avail===true
+        )).map(({ft})=><Available content={ft}/>)
+      }
+       {
+        features.filter(({ft,avail}) =>(
+          avail===false
+        )).map(({ft})=><Notavailable content={ft}/>)
+      }
+    </div>
+    <div className="button">
 
     </div>
+
+    </div>
+  );
+}
+
+function Available({content}){
+  console.log(content);
+  return (
+    <div className="feature-avail"><i class="fas fa-check"></i>            {content}</div>
+  );
+}
+function Notavailable({content}){
+  console.log(content)
+  return (
+    <div className="feature-notavail"><i class="fas fa-times"></i>              {content}</div>
   );
 }
